@@ -54,4 +54,31 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig=plt.figure()
+    ax1 = fig.add_subplot(2 , 2, 1)
+    ax2 = fig.add_subplot(2 , 2, 2)
+    ax3 = fig.add_subplot(2 , 2, 3)
+    ax4 = fig.add_subplot(2 , 2, 4)
+
+    ax1.plot( x , y1, color="r", label="y1 = x^2")
+    ax1.set_title("X al cuadrado")
+    ax1.grid(ls="dashed")
+    ax1.legend()
+
+    ax2.plot( x , y2, color="g", label="y2 = x^3")
+    ax2.set_title("X al cubo")
+    ax2.grid(ls="dashed")
+    ax2.legend()
+
+    ax3.scatter( x , y3, color="c", label="y3 = x^4", marker="+")
+    ax3.set_title("X a la cuarta")
+    ax3.grid(ls="dashdot")
+    ax3.legend()
+
+    ax4.scatter( x , y4, color="c", label="y4 = raiz_cuadrada(X)", marker="*")
+    ax4.set_title("raiz_cuadrada(X)")
+    ax4.grid(ls="dashdot")
+    ax4.legend()
+    plt.show()
+
     print("terminamos")

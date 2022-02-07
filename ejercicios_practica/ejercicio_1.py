@@ -10,6 +10,7 @@
 # Ejercicios de matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+from pyparsing import line
 
 
 if __name__ == '__main__':
@@ -29,9 +30,16 @@ if __name__ == '__main__':
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
+    fig = plt.figure()
+    fig.suptitle('Graficar Y=X**2')
+    ax = fig.add_subplot()
 
     # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
+    ax.plot(x , y , color= "r" , label='y=x**2', ls="--")
+    ax.legend()
+    plt.show()
+    
 
     # Crear acá su gráfico
 
